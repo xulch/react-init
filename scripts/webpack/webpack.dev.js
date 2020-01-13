@@ -58,7 +58,7 @@ module.exports = webpackMerge(base, {
     disableHostCheck: true,
     contentBase: [path.resolve(process.cwd(), 'dist'),path.resolve(process.cwd(), 'mocks')],
     compress: true,
-    port: 8080,
+    port: 8081,
     host: "0.0.0.0",
     hot: true,
     inline: true,
