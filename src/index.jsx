@@ -6,10 +6,7 @@ import { HashRouter, Route } from "react-router-dom";
 import loadable from "components/loadable";
 
 import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
-import thunkMiddleWare from "redux-thunk";
-import { createLogger } from "redux-logger";
-import reducer from "./reducer";
+import store from "./redux/store"
 
 /* eslint-disable */
 class App extends React.Component {
@@ -40,11 +37,6 @@ class App extends React.Component {
   }
 }
 
-const loggerMiddleWare = createLogger();
-const store = createStore(
-  reducer,
-  applyMiddleware(thunkMiddleWare, loggerMiddleWare)
-);
 ReactDOM.render(
   <Provider store={store}>
     <HashRouter>
