@@ -6,7 +6,7 @@ import { HashRouter, Route } from "react-router-dom";
 import loadable from "components/loadable";
 
 import { Provider } from "react-redux";
-import store from "./redux/store"
+import store from "./redux/store";
 
 /* eslint-disable */
 class App extends React.Component {
@@ -41,25 +41,24 @@ ReactDOM.render(
   <Provider store={store}>
     <HashRouter>
       <App>
-        {/* 路由配置 */}
-        <Route
-          path="/2"
-          exact
-          component={loadable(() => import("entries/pageTwo"))}
-        />{" "}
-        {/* pageTwo */}
-        <Route
-          path="/1"
-          exact
-          component={loadable(() => import("entries/pageOne"))}
-        />{" "}
-        {/* pageOne */}
+        {/* 首页 */}
         <Route
           path="/"
           exact
           component={loadable(() => import("entries/home"))}
-        />{" "}
-        {/* 首页 */}
+        />
+        {/* pageTwo */}
+        <Route
+          path="/2"
+          exact
+          component={loadable(() => import("entries/pageTwo"))}
+        />
+        {/* pageOne */}
+        <Route
+          path="/1"
+          exact
+          component={loadable(() => import("entries/pageOne"))}
+        />
       </App>
     </HashRouter>
   </Provider>,

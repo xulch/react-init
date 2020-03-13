@@ -7,10 +7,10 @@ import style from './styles/loading';
 function Loading(){
     return (
         <div className={style.loading}>
-            <img src={require("./images/loading.png")} />
+            <img src={require('./images/loading.png')} />
         </div>
     );
 }
-        
+
 
 export default Loading;

@@ -1,0 +1,6 @@
+{
+    "name": "date",
+    "version": "0.0.1",
+    "main": "./date.js",
+    "author": "徐立超"
+}

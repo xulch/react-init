@@ -1,11 +1,11 @@
 const webpackMerge = require('webpack-merge');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-const dev = require("./dev");
+const dev = require("./webpack.dev");
 
 module.exports = webpackMerge(dev, {
     plugins: [
         new BundleAnalyzerPlugin({
-            analyzerPort: 8082
+            analyzerPort: 8086
         })
     ]
 });

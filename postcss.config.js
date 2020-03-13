@@ -1,10 +1,10 @@
 module.exports = {
     plugins: [
         require('autoprefixer')({
-            browsers:[
+          overrideBrowserslist:[
                 "> 0.01%"
             ]
         }),
-        require("precss")
+        // require("precss")
     ]
 };
