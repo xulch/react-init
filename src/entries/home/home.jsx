@@ -7,7 +7,7 @@ import './styles/home.less';
 class Home extends React.Component {
     render() {
         return (
-            <div styleName="home">Hello world!</div>
+            <div styleName="home">Hello world!!</div>
         );
     }
 }
